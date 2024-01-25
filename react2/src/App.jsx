@@ -1,10 +1,10 @@
 
 import React from 'react'
-import Main from './app/Main'
+import Mobile from './app/mobile'
 function App() {
   return (
     <div>
-      <Main/>
+      <Mobile/>
     </div>
   )
 }
