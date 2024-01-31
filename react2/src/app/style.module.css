@@ -1,134 +1,35 @@
-.sideNav {
-    width: 70%;
-    height: 50svh;
-    border-radius: 1rem 0rem 0rem 1rem;
-    background-color: #084708;
-    box-shadow: 0px 5px 15px grey;
-    position: absolute;
-    top: 0%;
+
+.open{
+    width: 50%;
+    height: 50vh;
+    position: fixed;
+    background-color: whitesmoke;
+    box-shadow: 1px 1px 3px grey;
+    top: 0px;
     right: 0%;
-    animation-name: sideNav;
-    animation-duration: 1.5s;
-    z-index: 10;
+    animation-name: open;
+    animation-duration: 2s;
+    z-index: 999;
 }
-
-@keyframes sideNav {
-    from {
-        top: -200px;
-        right: 0%;
-    }
-
-    to {
+@keyframes open {
+    from{
         top: 0%;
-        right: 0%;
+        right: -100%;
+        opacity: .7;
     }
-}
-
-.stack {
-    width: 100%;
-    height: 50%;
-    top: 0%;
-    left: 0%;
-    position: absolute;
-    animation-name: stack;
-    animation-duration: 3s;
-    z-index: 5;
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-}
-
-@keyframes stack {
-    from {
-        top: 0%;
-        left: -10%;
-        opacity: 0;
-    }
-
-    to {
-        top: 0%;
-        left: 0%;
+    to{
+        top: 0px;
+        right: 0px;
         opacity: 1;
     }
 }
-
-.stack1 {
-    width: 100%;
-    height: 50%;
-    top: 50%;
-    right: 0%;
-    position: absolute;
-    animation-name: stacks;
-    animation-duration: 3s;
-    z-index: 5;
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+.close{
+    width: 50%;
+    height: 50vh;
+    position: fixed;
+    top: 0px;
+    right: -100%;
+    opacity: 1;
 }
 
-@keyframes stacks {
-    from {
-        top: 50%;
-        right: -10%;
-        opacity: 0;
-    }
 
-    to {
-        top: 50%;
-        right: 0%;
-        opacity: 1;
-    }
-}
-
-.animationText {
-    font-size: calc(1px + 4svw + 4svh);
-    font-weight: 900;
-    color: #084708;
-    width: 100%;
-    text-transform: uppercase;
-    display: inline-block;
-    white-space: nowrap;
-    overflow: hidden;
-    animation: typing 2s steps(8 , end)  infinite;
-}
-.animationText::after{
-    content: '';
-    width: 5px;
-    height: 25px;
-    display: inline-block;
-    background-color: white;
-    animation-name: cursor;
-    animation-duration: 1s;
-    margin-left: 5px;
-}
-
-@keyframes cursor {
-    0%{
-        width: 0%;
-    }
-    50%{
-        width: 100%;
-    }75%{
-        width: 100%;
-    }100%{
-        width: 0%;
-    }
-} 
-
-@keyframes typing {
-    0%{
-        width: 0%;
-    }
-    50%{
-        width: 100%;
-    }75%{
-        width: 100%;
-    }100%{
-        width: 0%;
-    }
-
-}

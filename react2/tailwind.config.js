@@ -13,8 +13,12 @@ export default {
         "lg":'1024px'
       },
       colors:{
-        'green':"#084708",
-        'white':"#f5f5f5"
+        'black':"#171717",
+        'white':"#f5f5f5",
+        'green':'#27AE60'
+      },
+      fontFamily:{
+        'poppins':['Poppins', 'sans-serif']
       }
     },
   },

@@ -1,162 +1,141 @@
-import React, { useEffect, useState } from 'react'
-import Logo from '../asset/logo.png'
-import Profile from '../asset/profile.png'
-import { FaEye, FaEyeSlash, FaTwitter, FaLinkedin, FaYoutube, FaGithub, FaReact, FaJsSquare, FaNode, FaMdb, FaDatabase } from 'react-icons/fa'
+import React from 'react'
+import profile from '../asset/ppp.png'
+import { useSelector, useDispatch } from 'react-redux'
 import styles from './style.module.css'
-import { useDispatch, useSelector } from 'react-redux'
-import { onSideNav, offSideNav, onStack } from '../redux/slice'
-
-const letter =['raymond', 'a developer']
-
-
-
-const Mobile = () => {
-    const [letterState] = useState(letter)
-    const [states, setStates] = useState(0)
-    const sideNav = useSelector(function (state) {
-        return state.mobile.slider
-    })
-    const stack = useSelector(function (state) {
-        return state.mobile.stack
+import { FaAlignJustify, FaTimes, FaExternalLinkAlt } from 'react-icons/fa'
+import { onSideNav } from '../redux/slice'
+import { SiMongoose, SiJavascript, SiReact, SiCss3, SiRedux, SiMongodb, SiTailwindcss, SiHtml5, SiExpress } from 'react-icons/si'
+import softwareLogo from '../asset/Vector.png'
+import devLogo from '../asset/dev.png'
+import webLogo from '../asset/web.png'
+const mobile = () => {
+    const show = useSelector(function (state) {
+        return state.mobile
     })
     const dispatch = useDispatch()
 
 
-    const handletters=() => {
-      setTimeout(function(){
-        setStates(function(oldState){
-            return oldState + 1
-        })
-        if(states >= letterState.length - 1){
-            setStates(0)
-        }
-      },2000)
-    }
-    useEffect(function () {
-        window.addEventListener('scroll', function () {
-            if (window.scrollY > 150) {
-                dispatch(onStack(true))
-            }
 
-        })
 
-    handletters()
-        
 
-        return (function () {
-            window.removeEventListener('scroll', function () {
-                if (this.window) {
-                    dispatch(onStack(false))
-                }
-            })
-        })
 
-    }, [window, handletters])
+
     return (
-        <div className='sm:block md:hidden lg:hidden'>
-            <div className='w-full h-[350svh] bg-[#141313]'>
-                <div className='w-full h-[15svh] bg-[#141313]  shadow-green shadow-lg flex justify-between items-center px-4 top-0 sticky z-[200]'>
-                    <img src={Logo} alt="logo" className='w-[2rem] h-[2rem]' onClick={handletters} />
-                    <FaEye className='fill-[#f5f5f5] w-[2rem] h-[2rem]' onClick={function () {
-                        dispatch(onSideNav(true))
+        <div className='w-full h-full sm:block md:hidden lg:hidden'>
+
+            <div className={`w-full h-[300svh] bg-[#171717] relative transition-all duration-[2s]  ${show ? `opacity-1` : `opacity-[.9]`}`}>
+                <div className='w-full h-[10svh] flex justify-between items-center px-3'>
+                    <h3 className='text-white capitalize font-[700] text-[calc(1px_+_3svw_+_3svh)] font-sans'>raymond</h3>
+                    <FaAlignJustify fill='white' className={`transition-all duration-[2s] ${show ? `opacity-1` : `opacity-0`} text-[calc(1px_+_2svw_+_2svh)]`} onClick={function () {
+                        dispatch(onSideNav())
                     }} />
-                    {sideNav ?
-                        <div className={styles.sideNav}>
-                            <div className='w-full h-full flex flex-col items-end'>
-                                <div className='w-full h-[20%] flex items-end px-2'>
-                                    <FaEyeSlash className='fill-[white] w-[2rem] h-[2rem]' onClick={function () {
-                                        dispatch(offSideNav(false))
-                                    }} />
-                                </div>
-                                <div className='w-full h-[80%] flex flex-col gap-4 items-center p-2'>
-                                    <h3 className='w-full h-[24%] text-center text-[calc(1px_+_2svw_+_2svh)] capitalize font-[500]'>projects</h3>
-                                    <hr className='w-[80%] border-[1px] border-black' />
-                                    <h3 className='w-full h-[24%] text-center text-[calc(1px_+_2svw_+_2svh)] capitalize font-[500]'>blog</h3>
-                                    <hr className='w-[80%] border-[1px] border-black' />
 
-                                    <h3 className='w-full h-[24%] text-center text-[calc(1px_+_2svw_+_2svh)] capitalize font-[500]'>about me</h3>
-                                </div>
-                            </div>
-                        </div> : ''
-                    }
-                </div>
-
-
-
-                <div className='w-full h-[170svh] relative'>
-                     <div className='w-[50px] h-[300svh] absolute right-0'>
-                        <div className='w-full h-[40svh] top-[22%] z-[10]  sticky flex flex-col justify-evenly items-center'>
-                            <FaTwitter className='text-[calc(1px_+_3svw_+_3svh)] fill-[blue]' />
-                            <FaLinkedin className='text-[calc(1px_+_3svw_+_3svh)] fill-[skyblue]' />
-                            <FaYoutube className='text-[calc(1px_+_3svw_+_3svh)] fill-[red]' />
-                            <FaGithub className='text-[calc(1px_+_3svw_+_3svh)] fill-[white]' />
+                    <div className={`transition-all duration-[2s] ${show ? styles.close : styles.open}`}>
+                        <div className='w-full h-[20%]'> <FaTimes fill='black' className='text-[calc(1px_+_4svw_+_4svh)] p-2 ' onClick={function () {
+                            dispatch(onSideNav())
+                        }} />
                         </div>
-                    </div> 
-                    <div className='w-full h-[15%] flex flex-col justify-center items-center'>
-                        <h3 className='text-[calc(1px_+_3svw_+_3svh)] text-white uppercase font-[500] h-[50%] flex items-end w-[50%]' >hi, i am
-                        <span className='text-[calc(1px_+_2svw_+_2svh)] font-[400] text-white lowercase'></span>
-                         </h3>
-                        <h3 className='h-[50%] flex items-center'> <br /> <span className={styles.animationText}>{letterState[states]}</span> </h3>
+                        <div className='w-full h-[80%] flex flex-col justify-center items-center'>
+                            <div className='w-full h-[32%] flex items-center justify-center gap-2'>
+                                <h3 className='font-poppins font-[600] capitalize text-center text-[1px_+_3svw_+_3svh]'>about me</h3>
+                                <FaExternalLinkAlt />
+                            </div>
+                            <hr className='w-[90%] border-1 border-black' />
+                            <div className='w-full h-[32%] flex items-center justify-center gap-2'>
+                                <h3 className='font-poppins font-[600] capitalize text-center text-[1px_+_3svw_+_3svh]'>projects</h3>
+                                <FaExternalLinkAlt />
+                            </div>
+                            <hr className='w-[90%] border-1 border-black' />
+
+                            <div className='w-full h-[32%] flex items-center justify-center gap-2'>
+                                <h3 className='font-poppins font-[600] capitalize text-center text-[1px_+_3svw_+_3svh]'>blog</h3>
+                                <FaExternalLinkAlt />
+                            </div>
+                        </div>
                     </div>
-                    <div className='w-full h-[50%] flex items-center absolute top-[15%]'>
-                        <img src={Profile} alt="img" className='' />
-                    </div>
-                    <div className='w-full h-[40%] flex justify-center items-center absolute top-[60%]'>
-                        <div className='w-[90%] h-[98%]'>
-                            <h3 className='text-[calc(1px_+_2svw_+_2svh)] font-[500] text-white tracking-[1px]'>I'm a skilled software developer with an experience in Javascript, and expertise in
-                                frameworks like React, Node.js, and Expressjs. I am a quick learner and collaborate closely
-                                with clients to create efficient, scalable and user-friendly solutions that solve real-world problems.
-                                Let's work together to bring your ideas to life!
+
+                </div>
+                <div className='w-full h-[50svh] flex '>
+                    <div className='w-[50%] h-full '>
+                        <div className='w-full h-[20%] '></div>
+                        <div className='w-full h-[60%]  py-3 px-3'>
+                            <h3 className='text-[calc(1px_+_2.5svw_+_2.5svh)] font-poppins font-[700] capitalize text-white'>
+                                hi, i <span className='lowercase'>am</span> <br /> oke raymond
+                            </h3>
+                            <h3 className='text-[calc(1px_+_1.2svw_+_1.2svh)] font-poppins font-[300] capitalize text-[#828282]'>
+                                frontend developer
                             </h3>
                         </div>
-                    </div>
-                </div>
-
-                <div className='w-full h-[10svh]'>
-                    <h3 className='text-[calc(1px_+_3svw_+_3svh)] text-green capitalize font-[500] text-center underline-offset-4 underline'>stack</h3>
-                </div>
-
-                <div className='w-full h-[50svh] flex flex-col relative'>
-                    {stack ?
-                        <div className='w-full h-full'>
-
-                            <div className={styles.stack}>
-                                <div className='w-[32%] h-[90%] border border-green shadow-sm shadow-white flex items-center justify-center rounded-[1rem]'>
-                                    <FaReact className='text-[calc(1px_+_6svw_+_6svh)] fill-[#80DEEA]' />
-                                </div>
-                                <div className='w-[32%] h-[90%] border border-green shadow-sm shadow-white flex items-center justify-center rounded-[1rem]'>
-                                    <FaJsSquare className='text-[calc(1px_+_6svw_+_6svh)] fill-[yellow]' />
-                                </div>
-                                <div className='w-[32%] h-[90%] border border-green  flex items-center justify-center rounded-[1rem]'>
-                                    <FaNode className='text-[calc(1px_+_6svw_+_6svh)] fill-[green]' />
-                                </div>
+                        <div className='w-full h-[20%]  flex gap-4 justify-center items-center'>
+                            <div className=' w-[20svw] h-[5svh] bg-[#27AE60] rounded-[5px] flex justify-center items-center'>
+                                <h3 className='text-[calc(1px_+_1.1svw_+_1.1svh)] capitalize font-[500] font-poppins text-white'>donwload CV</h3>
                             </div>
-                            <div className={styles.stack1}>
-                                <div className='w-[32%] h-[90%] border border-green  flex items-center justify-center rounded-[1rem]'>
-                                    <FaDatabase className='text-[calc(1px_+_6svw_+_6svh)] fill-[#80DEEA]' />
-                                </div>
-                                <div className='w-[32%] h-[90%] border border-green shadow-sm shadow-white flex items-center justify-center rounded-[1rem]'>
-                                    <FaJsSquare className='text-[calc(1px_+_6svw_+_6svh)] fill-[yellow]' />
-                                </div>
-                                <div className='w-[32%] h-[90%] border border-green shadow-sm shadow-white flex items-center justify-center rounded-[1rem]'>
-                                    <FaNode className='text-[calc(1px_+_6svw_+_6svh)] fill-[green]' />
-                                </div>
+                            <div className=' w-[20svw] h-[5svh]  rounded-[5px] flex justify-center items-center border border-white'>
+                                <h3 className='text-[calc(1px_+_1.1svw_+_1.1svh)] capitalize font-[500] font-poppins text-white'>projects</h3>
                             </div>
-
                         </div>
-                        : ''}
-                </div>
-
-
-                <div className='w-full h-[100svh] border border-white'>
-                    <div className='w-full h-[10svh]'>
-                        <h3 className='text-[calc(1px_+_3svw_+_3svh)] text-white capitalize font-[500] text-center underline-offset-4 underline'>projects</h3>
                     </div>
-                    <div className='w-full h-[90svh] border border-white'></div>
+                    <div className='w-[50%] h-full flex justify-center items-center'>
+                        <div className='w-[80%] h-[60%] flex justify-center items-center'>
+                            <img src={profile} alt="img" className='w-full h-auto object-cover' />
+                        </div>
+                    </div>
+                </div>
+                <div className='w-fulll h-[5svh] flex justify-center items-center'>
+                    <hr className='border-[1px] border-white rounded-full w-[85%]' />
+                </div>
+                <div className='w-full h-[70svh]'>
+                    <div className='w-full h-[15%] text-center'>
+                        <h3 className='text-[calc(1px_+_3svw_+_3svh)] font-poppins font-[700] capitalize text-white'>about me</h3>
+                    </div>
+                    <div className='w-full h-[85%] flex justify-center text-center'>
+                        <h3 className='text-[calc(1px_+_1.5svw_+_1.5svh)] font-poppins font-[400] capitalize text-green w-[90%]'>
+                            I am Oke Raymond, a frontend developer from
+                            Nigeria. I create beautiful and intuitive user interfaces
+                            that are both functional and user-friendly. I have experience
+                            working with HTML, CSS, JavaScript, and React. I am committed
+                            to delivering high-quality work and thrive in fast-paced environments.
+                            I am confident in my ability to work well with others and contribute
+                            to life-changing projects. I believe that technology has the power
+                            to change the world for the better, and I am excited to be a part
+                            of that change. If you have any further questions or would like
+                            to learn more about my experience, please don't hesitate to ask.</h3>
+                    </div>
+                </div>
+                <div className='w-full h-[90svh] flex flex-col justify-center items-center relative'>
+                    <div className='w-full h-[10%] text-center'>
+                        <h3 className='text-[calc(1px_+_3svw_+_3svh)] font-poppins font-[700] capitalize text-white'>stacks</h3>
+                    </div>
+                    <div className='w-[90%] h-[90%] flex flex-wrap gap-3 z-[1]'>
+                        <SiHtml5 className='text-[calc(1px_+_11svw_+_11svh)] rounded-md fill-[#F06529] shadow-sm shadow-white border border-white p-2' />
+                        <SiCss3 className='text-[calc(1px_+_11svw_+_11svh)] border border-white p-2 shadow-sm shadow-white rounded-md fill-[#2020f0]' />
+                        <SiJavascript className='text-[calc(1px_+_11svw_+_11svh)] border border-white p-2 shadow-sm shadow-white rounded-md fill-[yellow]' />
+                        <SiReact className='text-[calc(1px_+_11svw_+_11svh)] border border-white p-2 shadow-sm shadow-white rounded-md fill-[#80DEEA]' />
+                        <SiMongodb className='text-[calc(1px_+_11svw_+_11svh)] border border-white p-2 shadow-sm shadow-white rounded-md fill-[#4DB33D]' />
+                        <SiExpress className='text-[calc(1px_+_11svw_+_11svh)] border border-white p-2 shadow-sm shadow-white rounded-md fill-[#4db33d]' />
+                        <SiMongoose className='text-[calc(1px_+_11svw_+_11svh)] border border-white p-2 shadow-sm shadow-white rounded-md fill-[#B71C1C]' />
+                        <SiRedux className='text-[calc(1px_+_11svw_+_11svh)] border border-white p-2 shadow-sm shadow-white rounded-md fill-[#faf9f6]' />
+                        <SiTailwindcss className='text-[calc(1px_+_11svw_+_11svh)] border border-white p-2 shadow-sm shadow-white rounded-md fill-[#80DEEA]' />
+                    </div>
+                </div>
+                <div className='w-full h-[40svh] border border-white flex flex-col gap-3 justify-evenly items-center'>
+                    <div className='w-full h-[10%] text-start px-4'>
+                        <h3 className='text-[calc(1px_+_3svw_+_3svh)] font-poppins font-[700] capitalize text-white'>my interests</h3>
+                    </div>
+                    <div className='w-full h-[90%] border border-white flex gap-5'>
+                        <div className='w-[48%] h-[45%] border border-white bg-[#212121] flex flex-col justify-center items-start'>
+                            <img src={softwareLogo} alt="logo" className='px-3' />
+                            <h3 className='text-[calc(1px_+_1.4svw_+_1.4svh)] px-3 font-[500] font-poppins border text-[#535353] border-white'>software development</h3>
+                        </div>
+                        <div className='w-[48%] h-[45%] border border-white bg-[#212121] flex flex-col justify-center items-start'>
+                            <img src={devLogo} alt="logo" className='px-3' />
+                            <h3 className='text-[calc(1px_+_1.4svw_+_1.4svh)] px-3 font-[500] font-poppins border text-[#535353] border-white'>software development</h3>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     )
 }
 
-export default Mobile
+export default mobile
