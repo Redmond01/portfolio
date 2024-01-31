@@ -1,18 +1,23 @@
 import React from 'react'
 import profile from '../asset/ppp.png'
+import devLogo from '../asset/dev.png'
+import webLogo from '../asset/web.png'
+
+import { Link, useLocation } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import styles from './style.module.css'
 import { FaAlignJustify, FaTimes, FaExternalLinkAlt ,FaLinkedin, FaTwitch, FaYoutube, FaTwitter} from 'react-icons/fa'
 import { onSideNav } from '../redux/slice'
 import { SiMongoose, SiJavascript, SiReact, SiCss3, SiRedux, SiMongodb, SiTailwindcss, SiHtml5, SiExpress } from 'react-icons/si'
 import softwareLogo from '../asset/Vector.png'
-import devLogo from '../asset/dev.png'
-import webLogo from '../asset/web.png'
+
 const mobile = () => {
     const show = useSelector(function (state) {
         return state.mobile
     })
     const dispatch = useDispatch()
+
+    // const location = useLocation()
 
 
 
@@ -27,6 +32,7 @@ const mobile = () => {
                     <h3 className='text-white capitalize font-[700] text-[calc(1px_+_3svw_+_3svh)] font-sans'>raymond</h3>
                     <FaAlignJustify fill='white' className={`transition-all duration-[2s] ${show ? `opacity-1` : `opacity-0`} text-[calc(1px_+_2svw_+_2svh)]`} onClick={function () {
                         dispatch(onSideNav())
+                        // console.log(location.pathname)
                     }} />
 
                     <div className={`transition-all duration-[2s] ${show ? styles.close : styles.open}`}>
@@ -139,9 +145,9 @@ const mobile = () => {
                         <h3 className='text-[calc(1px_+_3svw_+_3svh)] font-poppins font-[700] capitalize text-white'>contacts</h3>
                     </div>
                     <div className='w-full h-[60%] flex justify-evenly items-center'>
-                        <FaTwitter className='text-[calc(1px_+_4svw_+_4svh)] border border-white rounded-lg p-1 fill-[blue]'/>
-                        <FaLinkedin className='text-[calc(1px_+_4svw_+_4svh)] border border-white rounded-lg p-1 fill-[#80DEEA]'/>
-                        <FaYoutube className='text-[calc(1px_+_4svw_+_4svh)] border border-white rounded-lg p-1 fill-[red]'/>
+                       <Link to={'https://twitter.com/raymonddev_'} target='_blank'><FaTwitter className='text-[calc(1px_+_4svw_+_4svh)] border border-white rounded-lg p-1 fill-[blue]'/></Link>
+                       <Link to={'https://linkedin.com/in/oke-raymond-6b742a2a4'} target='_blank'><FaLinkedin className='text-[calc(1px_+_4svw_+_4svh)] border border-white rounded-lg p-1 fill-[#80DEEA]'/></Link>
+                       <Link to={'https://youtube.com/@okeraymond?si=TT2vu6tv-_QMyHje'} target='_blank'><FaYoutube className='text-[calc(1px_+_4svw_+_4svh)] border border-white rounded-lg p-1 fill-[red]'/></Link>
                     </div>
                 </div>
             </div>
