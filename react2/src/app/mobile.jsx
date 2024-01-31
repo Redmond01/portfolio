@@ -66,8 +66,8 @@ const mobile = () => {
                                 frontend developer
                             </h3>
                         </div>
-                        <div className='w-full h-[20%]  flex gap-4 justify-center items-center'>
-                            <div className=' w-[20svw] h-[5svh] bg-[#27AE60] rounded-[5px] flex justify-center items-center'>
+                        <div className='w-full h-[20%] flex gap-3 justify-center items-center'>
+                            <div className=' w-[25svw] h-[5svh] bg-[#27AE60] rounded-[5px] flex justify-center items-center'>
                                 <h3 className='text-[calc(1px_+_1.1svw_+_1.1svh)] capitalize font-[500] font-poppins text-white'>donwload CV</h3>
                             </div>
                             <div className=' w-[20svw] h-[5svh]  rounded-[5px] flex justify-center items-center border border-white'>
@@ -77,14 +77,14 @@ const mobile = () => {
                     </div>
                     <div className='w-[50%] h-full flex justify-center items-center'>
                         <div className='w-[80%] h-[60%] flex justify-center items-center'>
-                            <img src={profile} alt="img" className='w-full h-auto object-cover' />
+                            <img src={profile} alt="img" className='w-full h-auto object-cover'/>
                         </div>
                     </div>
                 </div>
                 <div className='w-fulll h-[5svh] flex justify-center items-center'>
                     <hr className='border-[1px] border-white rounded-full w-[85%]' />
                 </div>
-                <div className='w-full h-[70svh]'>
+                <div className='w-full h-[75svh]'>
                     <div className='w-full h-[15%] text-center'>
                         <h3 className='text-[calc(1px_+_3svw_+_3svh)] font-poppins font-[700] capitalize text-white'>about me</h3>
                     </div>
@@ -102,37 +102,40 @@ const mobile = () => {
                             to learn more about my experience, please don't hesitate to ask.</h3>
                     </div>
                 </div>
-                <div className='w-full h-[90svh] flex flex-col justify-center items-center relative'>
+                <div className='w-full h-[85svh] flex flex-col justify-center items-center relative'>
                     <div className='w-full h-[10%] text-center'>
-                        <h3 className='text-[calc(1px_+_3svw_+_3svh)] font-poppins font-[700] capitalize text-white'>stacks</h3>
+                        <h3 className='text-[calc(1px_+_3svw_+_3svh)] font-poppins font-[700] capitalize text-white '>stacks</h3>
                     </div>
-                    <div className='w-[90%] h-[90%] flex flex-wrap gap-3 z-[1]'>
-                        <SiHtml5 className='text-[calc(1px_+_11svw_+_11svh)] rounded-md fill-[#F06529] shadow-sm shadow-white border border-white p-2' />
-                        <SiCss3 className='text-[calc(1px_+_11svw_+_11svh)] border border-white p-2 shadow-sm shadow-white rounded-md fill-[#2020f0]' />
-                        <SiJavascript className='text-[calc(1px_+_11svw_+_11svh)] border border-white p-2 shadow-sm shadow-white rounded-md fill-[yellow]' />
-                        <SiReact className='text-[calc(1px_+_11svw_+_11svh)] border border-white p-2 shadow-sm shadow-white rounded-md fill-[#80DEEA]' />
-                        <SiMongodb className='text-[calc(1px_+_11svw_+_11svh)] border border-white p-2 shadow-sm shadow-white rounded-md fill-[#4DB33D]' />
-                        <SiExpress className='text-[calc(1px_+_11svw_+_11svh)] border border-white p-2 shadow-sm shadow-white rounded-md fill-[#4db33d]' />
-                        <SiMongoose className='text-[calc(1px_+_11svw_+_11svh)] border border-white p-2 shadow-sm shadow-white rounded-md fill-[#B71C1C]' />
-                        <SiRedux className='text-[calc(1px_+_11svw_+_11svh)] border border-white p-2 shadow-sm shadow-white rounded-md fill-[#faf9f6]' />
-                        <SiTailwindcss className='text-[calc(1px_+_11svw_+_11svh)] border border-white p-2 shadow-sm shadow-white rounded-md fill-[#80DEEA]' />
+                    <div className='w-[90%] h-[70%] grid grid-cols-3 grid-rows-3 justify-center items-center gap-4 z-[1]'>
+                        <SiHtml5 className=' w-[calc(1px_+_27svw)] h-[calc(1px_+_17svh)] text-[calc(1px_+_11svw_+_11svh)] rounded-md fill-[#F06529] shadow-sm shadow-white border border-white p-2' />
+                        <SiCss3 className=' w-[calc(1px_+_27svw)] h-[calc(1px_+_17svh)] text-[calc(1px_+_11svw_+_11svh)] border border-white p-2 shadow-sm shadow-white rounded-md fill-[#2020f0]' />
+                        <SiJavascript className=' w-[calc(1px_+_27svw)] h-[calc(1px_+_17svh)] text-[calc(1px_+_11svw_+_11svh)] border border-white p-2 shadow-sm shadow-white rounded-md fill-[yellow]' />
+                        <SiReact className=' w-[calc(1px_+_27svw)] h-[calc(1px_+_17svh)] text-[calc(1px_+_11svw_+_11svh)] border border-white p-2 shadow-sm shadow-white rounded-md fill-[#80DEEA]' />
+                        <SiMongodb className=' w-[calc(1px_+_27svw)] h-[calc(1px_+_17svh)] text-[calc(1px_+_11svw_+_11svh)] border border-white p-2 shadow-sm shadow-white rounded-md fill-[#4DB33D]' />
+                        <SiExpress className=' w-[calc(1px_+_27svw)] h-[calc(1px_+_17svh)] text-[calc(1px_+_11svw_+_11svh)] border border-white p-2 shadow-sm shadow-white rounded-md fill-[#4db33d]' />
+                        <SiMongoose className=' w-[calc(1px_+_27svw)] h-[calc(1px_+_17svh)] text-[calc(1px_+_11svw_+_11svh)] border border-white p-2 shadow-sm shadow-white rounded-md fill-[#B71C1C]' />
+                        <SiRedux className=' w-[calc(1px_+_27svw)] h-[calc(1px_+_17svh)] text-[calc(1px_+_11svw_+_11svh)] border border-white p-2 shadow-sm shadow-white rounded-md fill-[#faf9f6]' />
+                        <SiTailwindcss className=' w-[calc(1px_+_27svw)] h-[calc(1px_+_17svh)] text-[calc(1px_+_11svw_+_11svh)] border border-white p-2 shadow-sm shadow-white rounded-md fill-[#80DEEA]' />
                     </div>
+                    <div className='w-full h-[15%]'></div>
                 </div>
-                <div className='w-full h-[40svh] border border-white flex flex-col gap-3 justify-evenly items-center'>
-                    <div className='w-full h-[10%] text-start px-4'>
+                <div className='w-full h-[40svh] flex flex-col'>
+                    <div className='w-full h-[20%] text-start px-4'>
                         <h3 className='text-[calc(1px_+_3svw_+_3svh)] font-poppins font-[700] capitalize text-white'>my interests</h3>
                     </div>
-                    <div className='w-full h-[90%] border border-white flex gap-5'>
-                        <div className='w-[48%] h-[45%] border border-white bg-[#212121] flex flex-col justify-center items-start'>
+                    <div className='w-full h-[70%] flex justify-center items-start gap-1'>
+                        <div className='w-[48%] h-[68%] bg-[#212121] flex flex-col justify-center items-start'>
                             <img src={softwareLogo} alt="logo" className='px-3' />
-                            <h3 className='text-[calc(1px_+_1.4svw_+_1.4svh)] px-3 font-[500] font-poppins border text-[#535353] border-white'>software development</h3>
+                            <h3 className='text-[calc(1px_+_1.5svw_+_1.5svh)] px-3 font-[500] font-poppins text-[#535353]'>software development</h3>
                         </div>
-                        <div className='w-[48%] h-[45%] border border-white bg-[#212121] flex flex-col justify-center items-start'>
+                        <div className='w-[48%] h-[68%] bg-[#212121] flex flex-col justify-center items-start'>
                             <img src={devLogo} alt="logo" className='px-3' />
-                            <h3 className='text-[calc(1px_+_1.4svw_+_1.4svh)] px-3 font-[500] font-poppins border text-[#535353] border-white'>software development</h3>
+                            <h3 className='text-[calc(1px_+_1.5svw_+_1.5svh)] px-3 font-[500] font-poppins text-[#535353]'>software development</h3>
                         </div>
                     </div>
+                    <div className='w-full h-[10%]'></div>
                 </div>
+
             </div>
         </div>
     )
