@@ -69,9 +69,9 @@ const mobile = () => {
                     <div className='w-[50%] h-full'>
                         <div className='w-full h-[5%]'></div>
                         <div className='w-full h-[50%]   px-3'>
-                            <h1 className='text-[calc(1px_+_2.2svw_+_2.2svh)] font-sans font-[700] capitalize text-white'>
+                            <h3 className='text-[calc(1px_+_2.2svw_+_2.2svh)] font-sans font-[700] capitalize text-white'>
                                 hi, i <span className='lowercase'>am</span> <br /> <span className='text-[calc(1px_+_1.7svw_+_1.7svh)] tracking-[1px]  border border-white'>oke raymond </span> 
-                            </h1>
+                            </h3>
                             <h3 className='text-[calc(1px_+_1.2svw_+_1.2svh)] font-sans font-[300] capitalize text-[#828282]'>
                                 frontend developer
                             </h3>
