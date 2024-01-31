@@ -13,7 +13,7 @@ export default {
         "lg":'1024px'
       },
       colors:{
-        'blacks':"#171717",
+        'blacks':"#212121",
         'whites':"#f5f5f5",
         'green':'#27AE60'
       },

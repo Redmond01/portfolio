@@ -65,12 +65,12 @@ const mobile = () => {
                     </div>
 
                 </div>
-                <div className='w-full h-[35svh] flex border border-white'>
+                <div className='w-full h-[35svh] flex '>
                     <div className='w-[50%] h-full'>
                         <div className='w-full h-[10%]'></div>
                         <div className='w-full h-[60%] px-3'>
                             <h3 className='text-[calc(1px_+_2.2svw_+_2.2svh)] font-sans font-[700] capitalize text-white'>
-                                hi, i <span className='lowercase'>am</span> <br /> <span className='text-[calc(1px_+_1.7svw_+_1.7svh)] tracking-[1px] '>oke raymond </span>
+                                hi, i <span className='lowercase'>am</span> <br /> <span className='text-[calc(1px_+_1.7svw_+_1.7svh)] tracking-[1px] '>Oke Raymond </span>
                             </h3>
                             <h3 className='text-[calc(1px_+_1.2svw_+_1.2svh)] font-sans font-[300] capitalize text-[#828282]'>
                                 frontend developer
@@ -95,25 +95,25 @@ const mobile = () => {
                     <hr className='border-[px] border-white rounded-full w-[85%]' />
                 </div>
 
-                <div className='w-full h-[40svh] flex flex-col border border-white'>
+                <div className='w-full h-[40svh] flex flex-col'>
                     <div className='w-full h-[10svh] text-center'>
                         <h3 className='text-[calc(1px_+_3svw_+_3svh)] font-sans font-[700] capitalize text-white'>about me</h3>
                     </div>
-                    <div className='w-full h-[30svh] flex justify-center text-center border border-white'>
-                        <h3 className='text-[calc(1px_+_1.5svw_+_1.5svh)] font-sans font-[400] capitalize text-whites p-1 leading-[170%]'>
+                    <div className='w-full h-[30svh] flex justify-center text-center'>
+                        <h3 className='text-[calc(1px_+_1.5svw_+_1.5svh)] font-sans font-[400] text-whites p-1 leading-[170%]'>
                             I am Oke Raymond, a frontend developer from
                             Nigeria. I create beautiful and intuitive user interfaces
                             that are both functional and user-friendly. I have experience
                             working with HTML, CSS, JavaScript, and React.</h3>
                     </div>
                 </div>
-                <div className='w-full h-[95svh] flex flex-col justify-center items-center relative border border-white'>
-                    <div className='w-[80%] h-[90%] border border-white'>
-                        <div className='w-full h-[24%] border border-white flex items-center'>
-                            <div className='w-[calc(1px_+_30%)] h-[calc(1px_+_60%)] border border-white bg-[#212121] rounded-full flex justify-center items-center'>
-                                <div className='w-[30%] h-[30%] border border-white rounded-full bg-green'></div>
+                <div className='w-full h-[95svh] flex flex-col justify-center items-center relative'>
+                    <div className='w-[80%] h-[90%]'>
+                        <div className='w-full h-[24%] flex items-center'>
+                            <div className='w-[calc(1px_+_30%)] h-[calc(1px_+_60%)] bg-[#212121] rounded-full flex justify-center items-center'>
+                                <div className='w-[30%] h-[30%] rounded-full bg-green'></div>
                             </div>
-                            <div className='w-[70%] h-[60%] border border-white flex justify-center items-center'>
+                            <div className='w-[70%] h-[60%] flex justify-center items-center'>
                                 <h3 className='text-[calc(1px_+_1.5svw_+_1.5svh)] font-sans font-[700] capitalize text-whites text-center'>
                                     my name
                                     <br />
@@ -123,11 +123,11 @@ const mobile = () => {
                                 </h3>
                             </div>
                         </div>
-                        <div className='w-full h-[24%] border border-white flex items-center'>
-                            <div className='w-[calc(1px_+_30%)] h-[calc(1px_+_60%)] border border-white bg-[#212121] rounded-full flex justify-center items-center'>
-                                <div className='w-[30%] h-[30%] border border-white rounded-full bg-green'></div>
+                        <div className='w-full h-[24%] flex items-center'>
+                            <div className='w-[calc(1px_+_30%)] h-[calc(1px_+_60%)] bg-[#212121] rounded-full flex justify-center items-center'>
+                                <div className='w-[30%] h-[30%] rounded-full bg-green'></div>
                             </div>
-                            <div className='w-[70%] h-[60%] border border-white flex justify-center items-center'>
+                            <div className='w-[70%] h-[60%] flex justify-center items-center'>
                                 <h3 className='text-[calc(1px_+_1.5svw_+_1.5svh)] font-sans font-[700] capitalize text-whites text-center'>
                                     email
                                     <br />
@@ -137,11 +137,11 @@ const mobile = () => {
                                 </h3>
                             </div>
                         </div>
-                        <div className='w-full h-[24%] border border-white flex items-center'>
-                            <div className='w-[calc(1px_+_30%)] h-[calc(1px_+_60%)] border border-white bg-[#212121] rounded-full flex justify-center items-center'>
-                                <div className='w-[30%] h-[30%] border border-white rounded-full bg-green'></div>
+                        <div className='w-full h-[24%] flex items-center'>
+                            <div className='w-[calc(1px_+_30%)] h-[calc(1px_+_60%)] bg-[#212121] rounded-full flex justify-center items-center'>
+                                <div className='w-[30%] h-[30%] rounded-full bg-green'></div>
                             </div>
-                            <div className='w-[70%] h-[60%] border border-white flex justify-center items-center'>
+                            <div className='w-[70%] h-[60%] flex justify-center items-center'>
                                 <h3 className='text-[calc(1px_+_1.5svw_+_1.5svh)] font-sans font-[700] capitalize text-whites text-center'>
                                     twitter
                                     <br />
@@ -151,11 +151,11 @@ const mobile = () => {
                                 </h3>
                             </div>
                         </div>
-                        <div className='w-full h-[24%] border border-white flex items-center'>
-                            <div className='w-[calc(1px_+_30%)] h-[calc(1px_+_60%)] border border-white bg-[#212121] rounded-full flex justify-center items-center'>
-                                <div className='w-[30%] h-[30%] border border-white rounded-full bg-green'></div>
+                        <div className='w-full h-[24%] flex items-center'>
+                            <div className='w-[calc(1px_+_30%)] h-[calc(1px_+_60%)] bg-[#212121] rounded-full flex justify-center items-center'>
+                                <div className='w-[30%] h-[30%] rounded-full bg-green'></div>
                             </div>
-                            <div className='w-[70%] h-[60%] border border-white flex justify-center items-center'>
+                            <div className='w-[70%] h-[60%] flex justify-center items-center'>
                                 <h3 className='text-[calc(1px_+_1.5svw_+_1.5svh)] font-sans font-[700] capitalize text-whites text-center'>
                                     linkedin
                                     <br />
@@ -168,10 +168,10 @@ const mobile = () => {
                     </div>
                 </div>
                 <div className='w-full h-[40svh] flex flex-col'>
-                    <div className='w-full h-[10svh] text-start px-4 border border-white'>
+                    <div className='w-full h-[10svh] text-start px-4'>
                         <h3 className='text-[calc(1px_+_3svw_+_3svh)] font-sans font-[700] capitalize text-white'>what i do</h3>
                     </div>
-                    <div className='w-full h-[30svh] flex justify-center items-start gap-6 border border-white'>
+                    <div className='w-full h-[30svh] flex justify-center items-start gap-6'>
                         <div className='w-[40svw] h-[20svh] bg-[#212121] flex flex-col justify-center items-start'>
                             <img src={softwareLogo} alt="logo" className='px-3' />
                             <h3 className='text-[calc(1px_+_1.5svw_+_1.5svh)] px-3 font-[500] font-sans text-[#535353] capitalize'>web app development</h3>
@@ -183,11 +183,11 @@ const mobile = () => {
                     </div>
                 </div>
 
-                <div className='w-full h-[25svh] border border-white'>
-                    <div className='w-full h-1/3 text-start px-4 border border-white'>
+                <div className='w-full h-[25svh]'>
+                    <div className='w-full h-1/3 text-start px-4'>
                         <h3 className='text-[calc(1px_+_3svw_+_3svh)] font-sans font-[700] capitalize text-white'>my skills</h3>
                     </div>
-                    <div className='w-full h-2/3 border border-green flex justify-evenly items-center py-4'>
+                    <div className='w-full h-2/3 bg-blacks flex justify-evenly items-center py-4'>
                         <h3 className='text-[calc(1px_+_2svw_+_2svh)] font-sans font-[700] capitalize text-[#535353] leading-[50%]'>
                             82%
                             <br />
