@@ -13,8 +13,8 @@ export default {
         "lg":'1024px'
       },
       colors:{
-        'black':"#171717",
-        'white':"#f5f5f5",
+        'blacks':"#171717",
+        'whites':"#f5f5f5",
         'green':'#27AE60'
       },
       fontFamily:{
