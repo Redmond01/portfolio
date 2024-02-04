@@ -37,21 +37,21 @@ const MobileProjects = () => {
                         }} />
                         </div>
                         <div className='w-full h-[80%] flex flex-col justify-center items-center'>
-                            <Link to={'/projects'} className='w-full h-[32%] flex items-center justify-center gap-2'>
-                                <h3 className='font-sans font-[600] capitalize text-center text-[1px_+_3svw_+_3svh]'>projects</h3>
+                            <Link to={'/'} className='w-full h-[32%] flex items-center justify-center gap-2'>
+                                <h3 className='font-sans font-[600] capitalize text-center text-[1px_+_3svw_+_3svh]'>home</h3>
                                 <FaExternalLinkAlt />
                             </Link>
                             <hr className='w-[90%] border-1 border-black' />
-                            <Link to={'/'} className='w-full h-[32%] flex items-center justify-center gap-2'>
+                            <Link to={'/project'} className='w-full h-[32%] flex items-center justify-center gap-2'>
                                 <h3 className='font-sans font-[600] capitalize text-center text-[1px_+_3svw_+_3svh]'>projects</h3>
                                 <FaExternalLinkAlt />
                             </Link>
                             <hr className='w-[90%] border-1 border-black' />
 
-                            <div className='w-full h-[32%] flex items-center justify-center gap-2'>
+                            <Link to={'/about'} className='w-full h-[32%] flex items-center justify-center gap-2'>
                                 <h3 className='font-sans font-[600] capitalize text-center text-[1px_+_3svw_+_3svh]'>blog</h3>
                                 <FaExternalLinkAlt />
-                            </div>
+                            </Link>
                         </div>
                     </div>
 
