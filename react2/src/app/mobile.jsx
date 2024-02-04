@@ -1,30 +1,35 @@
 import React, { useEffect, useRef } from 'react'
 import profile from '../asset/fff.png'
 import devLogo from '../asset/dev.png'
-import webLogo from '../asset/web.png'
 
 import { Link, useLocation } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import styles from './style.module.css'
 import { FaAlignJustify, FaTimes, FaExternalLinkAlt, FaGithub, FaTwitch, FaYoutube, FaTwitter } from 'react-icons/fa'
-import { onSideNav } from '../redux/slice'
-import { SiMongoose, SiJavascript, SiReact, SiCss3, SiRedux, SiMongodb, SiTailwindcss, SiHtml5, SiExpress } from 'react-icons/si'
+import { onSideNav, offSideNav } from '../redux/slice'
 import softwareLogo from '../asset/Vector.png'
 
-const mobile = () => {
-    const show = useSelector(function (state) {
-        return state.mobile
-    })
-    const dispatch = useDispatch()
-    // const urlLocation = useLocation()
-    // const currentLocation = urlLocation.pathname
-    // currentLocation = useRef()
 
-    // useEffect(function(){
-    //     if(urlLocation.pathname !== currentLocation){
-    //         dispatch(onSideNav())
-    //     }
-    // },[])
+
+
+const mobile = () => {
+    const dispatch = useDispatch()
+    const show = useSelector(function (state) {
+        return state.mobile.slider
+    })
+
+
+    const urlLocation = useLocation()
+    const currentLocation = urlLocation.pathname
+    const ref = useRef(currentLocation)
+
+
+    useEffect(function(){
+        const storeLoaction = location.pathname
+        if(storeLoaction !== ref){
+            dispatch(offSideNav(true))
+        }
+    },[])
 
 
 
@@ -33,34 +38,33 @@ const mobile = () => {
     return (
         <div className='w-full h-full sm:block md:hidden lg:hidden'>
             <div className={`w-full h-[270svh] bg-[#171717] relative transition-all duration-[2s]  ${show ? `opacity-1` : `opacity-[.9]`}`}>
-                <div className='w-full h-[10svh] flex justify-between items-center px-3 top-0 sticky bg-blacks z-[2]'>
+                <div className='w-full h-[10svh] flex justify-between items-center px-3 top-0 sticky bg-lightblack z-[2]'>
                     <h1 className='text-white capitalize font-[700] text-[calc(1px_+_3svw_+_3svh)] font-sans'>raymond</h1>
                     <FaAlignJustify fill='white' className={`transition-all duration-[2s] ${show ? `opacity-1` : `opacity-0`} text-[calc(1px_+_2svw_+_2svh)]`} onClick={function () {
-                        dispatch(onSideNav())
-                        // console.log(location.pathname)
+                        dispatch(onSideNav(false))
                     }} />
 
                     <div className={`transition-all duration-[2s] ${show ? styles.close : styles.open}`}>
                         <div className='w-full h-[20%]'> <FaTimes fill='black' className='text-[calc(1px_+_4svw_+_4svh)] p-2 ' onClick={function () {
-                            dispatch(onSideNav())
+                            dispatch(offSideNav(true))
                         }} />
                         </div>
                         <div className='w-full h-[80%] flex flex-col justify-center items-center'>
-                            <Link to={'/projects'} className='w-full h-[32%] flex items-center justify-center gap-2'>
+                            <Link to={'/'} className='w-full h-[32%] flex items-center justify-center gap-2'>
+                                <h3 className='font-sans font-[600] capitalize text-center text-[1px_+_3svw_+_3svh]'>home</h3>
+                                <FaExternalLinkAlt />
+                            </Link>
+                            <hr className='w-[90%] border-1 border-black' />
+                            <Link to={'/project'} className='w-full h-[32%] flex items-center justify-center gap-2'>
                                 <h3 className='font-sans font-[600] capitalize text-center text-[1px_+_3svw_+_3svh]'>projects</h3>
                                 <FaExternalLinkAlt />
                             </Link>
                             <hr className='w-[90%] border-1 border-black' />
-                            <div className='w-full h-[32%] flex items-center justify-center gap-2'>
-                                <h3 className='font-sans font-[600] capitalize text-center text-[1px_+_3svw_+_3svh]'>projects</h3>
-                                <FaExternalLinkAlt />
-                            </div>
-                            <hr className='w-[90%] border-1 border-black' />
 
-                            <div className='w-full h-[32%] flex items-center justify-center gap-2'>
-                                <h3 className='font-sans font-[600] capitalize text-center text-[1px_+_3svw_+_3svh]'>blog</h3>
+                            <Link to={'/about'} className='w-full h-[32%] flex items-center justify-center gap-2'>
+                                <h3 className='font-sans font-[600] capitalize text-center text-[1px_+_3svw_+_3svh]'>about me</h3>
                                 <FaExternalLinkAlt />
-                            </div>
+                            </Link>
                         </div>
                     </div>
 
@@ -188,22 +192,22 @@ const mobile = () => {
                         <h3 className='text-[calc(1px_+_3svw_+_3svh)] font-sans font-[700] capitalize text-white'>my skills</h3>
                     </div>
                     <div className='w-full h-2/3 bg-blacks flex justify-evenly items-center py-4'>
-                        <h3 className='text-[calc(1px_+_2svw_+_2svh)] font-sans font-[700] capitalize text-[#535353] leading-[50%]'>
+                        <h3 className='text-[calc(1px_+_2svw_+_2svh)] font-sans font-[700] capitalize text-[#535353] leading-[70%]'>
                             82%
                             <br />
                             <span className='text-[calc(1px_+_1svw_+_1svh)] font-sans font-[700] capitalize text-green'>JavaScript</span>
                         </h3>
-                        <h3 className='text-[calc(1px_+_2svw_+_2svh)] font-sans font-[700] capitalize text-[#535353] leading-[50%]'>
+                        <h3 className='text-[calc(1px_+_2svw_+_2svh)] font-sans font-[700] capitalize text-[#535353] leading-[70%]'>
                             73%
                             <br />
                             <span className='text-[calc(1px_+_1svw_+_1svh)] font-sans font-[700] capitalize text-green'>react</span>
                         </h3>
-                        <h3 className='text-[calc(1px_+_2svw_+_2svh)] font-sans font-[700] capitalize text-[#535353] leading-[50%]'>
+                        <h3 className='text-[calc(1px_+_2svw_+_2svh)] font-sans font-[700] capitalize text-[#535353] leading-[70%]'>
                             70%
                             <br />
                             <span className='text-[calc(1px_+_1svw_+_1svh)] font-sans font-[700] capitalize text-green'>express</span>
                         </h3>
-                        <h3 className='text-[calc(1px_+_2svw_+_2svh)] font-sans font-[700] capitalize text-[#535353] leading-[50%]'>
+                        <h3 className='text-[calc(1px_+_2svw_+_2svh)] font-sans font-[700] capitalize text-[#535353] leading-[70%]'>
                             75%
                             <br />
                             <span className='text-[calc(1px_+_1svw_+_1svh)] font-sans font-[700] capitalize text-green'>nodejs</span>

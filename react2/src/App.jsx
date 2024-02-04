@@ -1,6 +1,7 @@
 
 import React from 'react'
-import Mobile from './app/mobile'
+import HomePage from './app/homePage'
+import MobileAbout from './app/mobileAbout'
 import MobileProjects from './app/mobileProjects'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 function App() {
@@ -8,11 +9,11 @@ function App() {
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Mobile />} />
-          <Route path='/projects' element={<MobileProjects/>}/>
+          <Route path='/' element={<HomePage />} />
+          <Route path='/about' element={<MobileAbout/>}/>
+          <Route path='/project' element={<MobileProjects/>}/>
         </Routes>
       </BrowserRouter>
-      {/* <Mobile/> */}
     </div>
   )
 }
