@@ -1,19 +1,20 @@
 import React from 'react'
 import profile from '../asset/fff.png'
-// import web from '../asset/web.png'
-// import dev from '../asset/dev.png'
+import web from '../asset/web.png'
+import dev from '../asset/dev.png'
 // import {ReactComponent as Web} from '../asset/svg/Vector.svg'
 
 const Desktop = () => {
     return (
         <div className='sm:hidden md:block lg:block'>
-            <div className='w-full h-[250svh] bg-blacks text-white'>
+            <div className='w-full h-[260svh] bg-blacks text-white'>
                 <div className='w-full h-[10svh] flex '>
                     <div className='w-[50%] h-full flex items-center justify-start px-4'>
                         <div className='w-[10%] h-full'></div>
                         <h3 className='text-whites font-[600] w-[70%] font-sans capitalize text-[calc(1px_+_2svw_+_2svh)]'> raymond</h3>
                     </div>
-                    <div className='w-[50%] h-full flex justify-end items-center px-2 gap-3'>
+                    <div className='w-[50%] h-full flex justify-evenly items-center'>
+                        <div className='w-[30%] h-full'></div>
                         <h3 className='text-whites font-[600] font-sans capitalize text-[calc(1px_+_.8svw_+_.8svh)] cursor-pointer'> about me</h3>
                         <h3 className='text-whites font-[600] font-sans capitalize text-[calc(1px_+_.8svw_+_.8svh)] cursor-pointer'> projects</h3>
                         <h3 className='text-whites font-[600] font-sans capitalize text-[calc(1px_+_.8svw_+_.8svh)] cursor-pointer'> contact me</h3>
@@ -105,20 +106,49 @@ const Desktop = () => {
                     </div>
                     <div className='w-[10%] h-full'></div>
                 </div>
-                <div className='w-full h-[50svh] border border-white'>
+                <div className='w-full h-[5svh] '></div>
+                <div className='w-full h-[50svh]'>
                     <div className='w-full h-[30%] flex justify-center items-center'>
                         <h3 className='text-whites font-[600] font-sans capitalize text-[calc(1px_+_2svw_+_2svh)]'> what i do</h3>
                     </div>
-                    <div className='w-full h-[70%] border border-white'>
-                        <div className='w-[30svw] h-[80%] border border-white bg-lightblack'>
+                    <div className='w-full h-[70%] flex justify-center items-end gap-8'>
+                        <div className='w-[30svw] h-[80%] bg-lightblack'>
                             <div className='w-full h-[30%] flex'>
                                 <div className='w-[15%] h-full'></div>
-                                {/* <Web/> */}
+                                <img src={web} alt="img" />
                             </div>
-                            <div className='w-full h-[70%] border border-white flex '>
+                            <div className='w-full h-[70%] flex '>
                                 <div className='w-[20%] h-full'></div>
                                 <h3 className='text-[#535353] font-[600] font-sans capitalize text-[calc(1px_+_2svw_+_2svh)]'> software development</h3>
                             </div>
+                        </div>
+                        <div className='w-[30svw] h-[80%] bg-lightblack'>
+                            <div className='w-full h-[30%] flex'>
+                                <div className='w-[15%] h-full'></div>
+                                <img src={dev} alt="img"/>
+                            </div>
+                            <div className='w-full h-[70%] flex '>
+                                <div className='w-[20%] h-full'></div>
+                                <h3 className='text-[#535353] font-[600] font-sans capitalize text-[calc(1px_+_2svw_+_2svh)]'> web app development</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className='w-full h-[10svh]'></div>
+                <div className='w-full h-[50svh]'>
+                    <div className='w-full h-[30%] flex justify-center items-center'>
+                        <h3 className='text-white font-[600] font-sans capitalize text-[calc(1px_+_2svw_+_2svh)]'> my skills</h3>
+                    </div>
+                    <div className='w-full h-[70%] flex justify-center '>
+                        <div className='w-[80%] h-full bg-lightblack flex justify-evenly items-center'>
+                        <h3 className='text-[#4F4F4F] font-[700] font-sans capitalize text-[calc(1px_+_3svw_+_3svh)] leading-[70%]'> 82% <br />
+                        <span className='text-green font-[700] font-sans capitalize text-[calc(1px_+_1svw_+_1svh)]'>JavaScript</span></h3>                           
+                        <h3 className='text-[#4F4F4F] font-[700] font-sans capitalize text-[calc(1px_+_3svw_+_3svh)] leading-[70%]'> 73% <br />
+                        <span className='text-green font-[700] font-sans capitalize text-[calc(1px_+_1svw_+_1svh)]'>react</span></h3>                           
+                        <h3 className='text-[#4F4F4F] font-[700] font-sans capitalize text-[calc(1px_+_3svw_+_3svh)] leading-[70%]'> 70% <br />
+                        <span className='text-green font-[700] font-sans capitalize text-[calc(1px_+_1svw_+_1svh)]'>express</span></h3>                           
+                        <h3 className='text-[#4F4F4F] font-[700] font-sans capitalize text-[calc(1px_+_3svw_+_3svh)] leading-[70%]'> 70% <br />
+                        <span className='text-green font-[700] font-sans capitalize text-[calc(1px_+_1svw_+_1svh)]'>nodejs</span></h3>                           
                         </div>
                     </div>
                 </div>
