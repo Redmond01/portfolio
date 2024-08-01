@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from 'react'
 import { FaAlignJustify, FaExternalLinkAlt, FaTimes } from 'react-icons/fa'
 import { useSelector, useDispatch } from 'react-redux'
-import styles from './style.module.css'
+import styles from '../style.module.css'
 import { useLocation, Link } from 'react-router-dom'
-import { offSideNav, onSideNav } from '../redux/slice'
+import { offSideNav, onSideNav } from '../../redux/slice'
 
 
 const MobileProjects = () => {

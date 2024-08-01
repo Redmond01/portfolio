@@ -1,13 +1,13 @@
 import React, { useEffect, useRef } from 'react'
-import profile from '../asset/fff.png'
-import devLogo from '../asset/dev.png'
+import profile from '../../asset/fff.png'
+import devLogo from '../../asset/dev.png'
 
 import { Link, useLocation } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
-import styles from './style.module.css'
-import { FaAlignJustify, FaTimes, FaExternalLinkAlt, FaGithub, FaTwitch, FaYoutube, FaTwitter } from 'react-icons/fa'
-import { onSideNav, offSideNav } from '../redux/slice'
-import softwareLogo from '../asset/Vector.png'
+import styles from '.././style.module.css'
+import { FaAlignJustify, FaTimes, FaExternalLinkAlt, FaGithub, FaYoutube, FaTwitter, FaUser } from 'react-icons/fa'
+import { onSideNav, offSideNav } from '../../redux/slice'
+import softwareLogo from '../../asset/Vector.png'
 
 
 
@@ -24,12 +24,12 @@ const mobile = () => {
     const ref = useRef(currentLocation)
 
 
-    useEffect(function(){
+    useEffect(function () {
         const storeLoaction = location.pathname
-        if(storeLoaction !== ref){
+        if (storeLoaction !== ref) {
             dispatch(offSideNav(true))
         }
-    },[])
+    }, [])
 
 
 
@@ -37,14 +37,14 @@ const mobile = () => {
 
     return (
         <div className='w-full h-full sm:block md:hidden lg:hidden'>
-            <div className={`w-full h-[270svh] bg-[#171717] relative transition-all duration-[2s]  ${show ? `opacity-1` : `opacity-[.9]`}`}>
+            <div className={`w-full h-[280svh] bg-[#171717] relative transition-all duration-[.5s]  ${show ? `opacity-1` : `opacity-[.9]`}`}>
                 <div className='w-full h-[10svh] flex justify-between items-center px-3 top-0 sticky bg-lightblack z-[2]'>
                     <h1 className='text-white capitalize font-[700] text-[calc(1px_+_3svw_+_3svh)] font-sans'>raymond</h1>
-                    <FaAlignJustify fill='white' className={`transition-all duration-[2s] ${show ? `opacity-1` : `opacity-0`} text-[calc(1px_+_2svw_+_2svh)]`} onClick={function () {
+                    <FaAlignJustify fill='white' className={`transition-all duration-[.5s] ${show ? `opacity-1` : `opacity-0`} text-[calc(1px_+_2svw_+_2svh)]`} onClick={function () {
                         dispatch(onSideNav(false))
                     }} />
 
-                    <div className={`transition-all duration-[2s] ${show ? styles.close : styles.open}`}>
+                    <div className={`transition-all duration-[.5s] ${show ? styles.close : styles.open}`}>
                         <div className='w-full h-[20%]'> <FaTimes fill='black' className='text-[calc(1px_+_4svw_+_4svh)] p-2 ' onClick={function () {
                             dispatch(offSideNav(true))
                         }} />
@@ -67,8 +67,8 @@ const mobile = () => {
                             </Link>
                         </div>
                     </div>
-
                 </div>
+                <div className='w-full h-[7svh]'></div>
                 <div className='w-full h-[35svh] flex '>
                     <div className='w-[50%] h-full'>
                         <div className='w-full h-[10%]'></div>
@@ -80,7 +80,7 @@ const mobile = () => {
                                 frontend developer
                             </h3>
                         </div>
-                        <div className='w-full h-[20%] flex gap-3 justify-center items-start'>
+                        <div className='w-full h-[20%] flex gap-3 justify-center items-start px-2'>
                             <div className=' w-[calc(1px_+_27svw)] h-[calc(1px_+_3.5svh)]  bg-[#27AE60] rounded-full flex justify-center items-center'>
                                 <h3 className='text-[calc(1px_+_1svw_+_1svh)] capitalize font-[500] font-sans text-white'>donwload CV</h3>
                             </div>
@@ -91,7 +91,7 @@ const mobile = () => {
                     </div>
                     <div className='w-[50%] h-full py-10 flex justify-center items-start'>
                         <div className='w-[80%] h-[60%] flex justify-center items-center'>
-                            <img src={profile} alt="img" className='w-full  object-cover' />
+                            <img src={profile} alt="img" className='w-[90%] h-auto' />
                         </div>
                     </div>
                 </div>
@@ -115,7 +115,7 @@ const mobile = () => {
                     <div className='w-[80%] h-[90%]'>
                         <div className='w-full h-[24%] flex items-center'>
                             <div className='w-[calc(1px_+_30%)] h-[calc(1px_+_60%)] bg-[#212121] rounded-full flex justify-center items-center'>
-                                <div className='w-[30%] h-[30%] rounded-full bg-green'></div>
+                                <Link><FaUser className='fill-green text-[calc(1px_+_1.7svw_+_1.7svh)]' /></Link>
                             </div>
                             <div className='w-[70%] h-[60%] flex justify-center items-center'>
                                 <h3 className='text-[calc(1px_+_1.5svw_+_1.5svh)] font-sans font-[700] capitalize text-whites text-center'>
@@ -129,7 +129,7 @@ const mobile = () => {
                         </div>
                         <div className='w-full h-[24%] flex items-center'>
                             <div className='w-[calc(1px_+_30%)] h-[calc(1px_+_60%)] bg-[#212121] rounded-full flex justify-center items-center'>
-                                <div className='w-[30%] h-[30%] rounded-full bg-green'></div>
+                                <Link><FaUser className='fill-green text-[calc(1px_+_1.7svw_+_1.7svh)]' /></Link>
                             </div>
                             <div className='w-[70%] h-[60%] flex justify-center items-center'>
                                 <h3 className='text-[calc(1px_+_1.5svw_+_1.5svh)] font-sans font-[700] capitalize text-whites text-center'>
@@ -143,7 +143,7 @@ const mobile = () => {
                         </div>
                         <div className='w-full h-[24%] flex items-center'>
                             <div className='w-[calc(1px_+_30%)] h-[calc(1px_+_60%)] bg-[#212121] rounded-full flex justify-center items-center'>
-                                <div className='w-[30%] h-[30%] rounded-full bg-green'></div>
+                                <Link><FaUser className='fill-green text-[calc(1px_+_1.7svw_+_1.7svh)]' /></Link>
                             </div>
                             <div className='w-[70%] h-[60%] flex justify-center items-center'>
                                 <h3 className='text-[calc(1px_+_1.5svw_+_1.5svh)] font-sans font-[700] capitalize text-whites text-center'>
@@ -157,7 +157,7 @@ const mobile = () => {
                         </div>
                         <div className='w-full h-[24%] flex items-center'>
                             <div className='w-[calc(1px_+_30%)] h-[calc(1px_+_60%)] bg-[#212121] rounded-full flex justify-center items-center'>
-                                <div className='w-[30%] h-[30%] rounded-full bg-green'></div>
+                                <Link><FaUser className='fill-green text-[calc(1px_+_1.7svw_+_1.7svh)]' /></Link>
                             </div>
                             <div className='w-[70%] h-[60%] flex justify-center items-center'>
                                 <h3 className='text-[calc(1px_+_1.5svw_+_1.5svh)] font-sans font-[700] capitalize text-whites text-center'>
@@ -186,7 +186,6 @@ const mobile = () => {
                         </div>
                     </div>
                 </div>
-
                 <div className='w-full h-[25svh]'>
                     <div className='w-full h-1/3 text-start px-4'>
                         <h3 className='text-[calc(1px_+_3svw_+_3svh)] font-sans font-[700] capitalize text-white'>my skills</h3>

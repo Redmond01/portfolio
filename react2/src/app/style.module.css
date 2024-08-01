@@ -8,7 +8,7 @@
     top: 0px;
     right: 0%;
     animation-name: open;
-    animation-duration: 2s;
+    animation-duration: .5s;
     z-index: 999;
 }
 @keyframes open {

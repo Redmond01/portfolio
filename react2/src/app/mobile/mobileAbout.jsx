@@ -1,10 +1,10 @@
 import React, { useEffect, useRef } from 'react'
 import { FaAlignJustify, FaTimes, FaExternalLinkAlt , FaTwitter, FaGithub, FaYoutube} from 'react-icons/fa'
-import styles from './style.module.css'
+import styles from '../style.module.css'
 import { Link, useLocation } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
-import { onSideNav, offSideNav } from '../redux/slice'
-const MobileProjects = () => {
+import { onSideNav, offSideNav } from '../../redux/slice'
+const MobileAbout = () => {
     const dispatch = useDispatch()
     const show = useSelector(function (state) {
         return state.mobile.slider
@@ -91,4 +91,4 @@ const MobileProjects = () => {
     )
 }
 
-export default MobileProjects
+export default MobileAbout
