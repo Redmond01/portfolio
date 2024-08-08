@@ -1,8 +1,13 @@
-import React from 'react'
+import React from 'react';
+import DesktopProject from './app/desktop/DesktopProject';
+import TabletProject from './app/tablet/TabletProject';
 
 const project = () => {
   return (
-    <div>project</div>
+    <div>
+      <DesktopProject/>
+      <TabletProject/>
+    </div>
   )
 }
 

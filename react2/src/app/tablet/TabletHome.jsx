@@ -4,6 +4,8 @@ import web from '../../asset/web.png';
 import dev from '../../asset/dev.png';
 import { FaUser, FaInbox, FaTwitter, FaYoutube } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import WebSvg from '../../asset/svg/vector.svg'
+import WebSvg1 from '../../asset/svg/vectors.svg'
 
 const TabletHome = () => {
     return (
@@ -16,9 +18,9 @@ const TabletHome = () => {
                     </div>
                     <div className='w-[50%] h-full flex justify-evenly items-center'>
                         <div className='w-[30%] h-full'></div>
-                        <h3 className='text-whites font-[600] font-sans capitalize text-[calc(1px_+_.6svw_+_.6svh)] cursor-pointer'> about me</h3>
-                        <h3 className='text-whites font-[600] font-sans capitalize text-[calc(1px_+_.6svw_+_.6svh)] cursor-pointer'> projects</h3>
-                        <h3 className='text-whites font-[600] font-sans capitalize text-[calc(1px_+_.6svw_+_.6svh)] cursor-pointer'> contact me</h3>
+                        <h3 className='text-whites font-[600] font-sans capitalize text-[calc(1px_+_.6svw_+_.6svh)] cursor-pointer'> <Link to={'/'}> about me</Link></h3>
+                        <h3 className='text-whites font-[600] font-sans capitalize text-[calc(1px_+_.6svw_+_.6svh)] cursor-pointer'><Link to={'/project'}> projects</Link></h3>
+                        {/* <h3 className='text-whites font-[600] font-sans capitalize text-[calc(1px_+_.6svw_+_.6svh)] cursor-pointer'> contact me</h3> */}
                     </div>
                 </div>
                 <div className='w-full h-[40svh] flex items-end'>
@@ -34,10 +36,10 @@ const TabletHome = () => {
                             </div>
                             <div className='w-[70%] h-[20%] flex'>
                                 <div className='w-[50%] h-full flex justify-center items-center'>
-                                    <h3 className='text-whites font-[600] font-sans text-[calc(1px_+_.6svw_+_.6svh)] rounded-full p-1 bg-green w-[95%] h-[40%] flex justify-center items-center text-center cursor-pointer hover:bg-blacks hover:border hover:border-white hover:rounded-full'> Download CV</h3>
+                                    <h3 className='text-whites font-[600] font-sans text-[calc(1px_+_.6svw_+_.6svh)] rounded-full p-1 bg-green w-[95%] h-[40%] flex justify-center items-center text-center cursor-pointer hover:bg-blacks hover:border hover:border-white hover:rounded-full'><Link to={'https://www.dropbox.com/scl/fi/ynzcm7dpz9ne0qlzsrizg/OKE-RAYMOND-JESUTOFUNMI-CV.pdf?rlkey=hjvlzwp45l69ydf865tvigfca&st=y6rxkuxp&dl=0'} target='_blanck'>Download CV</Link> </h3>
                                 </div>
                                 <div className='w-[50%] h-full flex justify-center items-center'>
-                                    <h3 className='text-whites font-[600] font-sans text-[calc(1px_+_.6svw_+_.6svh)] rounded-full p-1s flex justify-center items-center  w-[95%] h-[40%] border border-harsh'> projects</h3>
+                                    <h3 className='text-whites font-[600] font-sans text-[calc(1px_+_.6svw_+_.6svh)] rounded-full p-1s flex justify-center items-center  w-[95%] h-[40%] border border-harsh'><Link to={'/project'}> projects</Link></h3>
                                 </div>
                             </div>
 
@@ -118,7 +120,7 @@ const TabletHome = () => {
                         <div className='w-[30%] h-[60%] bg-lightblack'>
                             <div className='w-full h-[30%] flex'>
                                 <div className='w-[15%] h-full'></div>
-                                <img src={web} alt="img" />
+                                <img src={WebSvg} alt="img" />
                             </div>
                             <div className='w-full h-[70%] flex '>
                                 <div className='w-[20%] h-full'></div>
@@ -128,7 +130,7 @@ const TabletHome = () => {
                         <div className='w-[30%] h-[60%] bg-lightblack'>
                             <div className='w-full h-[30%] flex'>
                                 <div className='w-[15%] h-full'></div>
-                                <img src={dev} alt="img" />
+                                <img src={WebSvg1} alt="img" />
                             </div>
                             <div className='w-full h-[70%] flex '>
                                 <div className='w-[20%] h-full'></div>

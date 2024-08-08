@@ -4,7 +4,9 @@ import web from '../../asset/web.png'
 import dev from '../../asset/dev.png';
 import { Link } from 'react-router-dom';
 import { FaUser, FaInbox, FaTwitter, FaYoutube } from 'react-icons/fa';
-// import {ReactComponent as Web} from '../asset/svg/Vector.svg'
+import WebSvg from '../../asset/svg/vector.svg'
+import WebSvg1 from '../../asset/svg/vectors.svg'
+
 
 const Desktop = () => {
     return (
@@ -17,9 +19,9 @@ const Desktop = () => {
                     </div>
                     <div className='w-[50%] h-full flex justify-evenly items-center'>
                         <div className='w-[30%] h-full'></div>
-                        <Link to={'/about'}> <h3 className='text-whites font-[600] font-sans capitalize text-[calc(1px_+_.8svw_+_.8svh)] cursor-pointer'> about me</h3></Link>
+                        <Link to={'#'}> <h3 className='text-whites font-[600] font-sans capitalize text-[calc(1px_+_.8svw_+_.8svh)] cursor-pointer'> about me</h3></Link>
                         <Link to={'/project'}> <h3 className='text-whites font-[600] font-sans capitalize text-[calc(1px_+_.8svw_+_.8svh)] cursor-pointer'> projects</h3></Link>
-                       <Link to={'#links'}> <h3 className='text-whites font-[600] font-sans capitalize text-[calc(1px_+_.8svw_+_.8svh)] cursor-pointer'> contact me</h3></Link>
+                       {/* <Link to={'#links'}> <h3 className='text-whites font-[600] font-sans capitalize text-[calc(1px_+_.8svw_+_.8svh)] cursor-pointer'> contact me</h3></Link> */}
                     </div>
                 </div>
                 <div className='w-full h-[10svh]'></div>
@@ -36,10 +38,10 @@ const Desktop = () => {
                             </div>
                             <div className='w-[70%] h-[20%] flex'>
                                 <div className='w-[50%] h-full flex justify-center items-center'>
-                                    <h3 className='text-whites font-[600] font-sans text-[calc(1px_+_.8svw_+_.8svh)] rounded-full p-1 bg-green w-[95%] h-[50%] flex justify-center items-center text-center cursor-pointer hover:bg-blacks hover:border hover:border-white hover:rounded-full'> Download CV</h3>
+                                    <h3 className='text-whites font-[600] font-sans text-[calc(1px_+_.8svw_+_.8svh)] rounded-full p-1 bg-green w-[95%] h-[50%] flex justify-center items-center text-center cursor-pointer hover:bg-blacks hover:border hover:border-white hover:rounded-full'><Link to={'https://www.dropbox.com/scl/fi/ynzcm7dpz9ne0qlzsrizg/OKE-RAYMOND-JESUTOFUNMI-CV.pdf?rlkey=hjvlzwp45l69ydf865tvigfca&st=y6rxkuxp&dl=0'} target='_blanck'>Download CV</Link> </h3>
                                 </div>
                                 <div className='w-[50%] h-full flex justify-center items-center'>
-                                    <h3 className='text-whites font-[600] font-sans text-[calc(1px_+_.8svw_+_.8svh)] rounded-full p-1s flex justify-center items-center  w-[95%] h-[50%] cursor-pointer border border-harsh hover:bg-harsh'> projects</h3>
+                                    <h3 className='text-whites font-[600] font-sans text-[calc(1px_+_.8svw_+_.8svh)] rounded-full p-1s flex justify-center items-center  w-[95%] h-[50%] cursor-pointer border border-harsh hover:bg-harsh'><Link to={'/project'}> projects</Link></h3>
                                 </div>
                             </div>
                         </div>
@@ -60,7 +62,7 @@ const Desktop = () => {
                             I am Oke Raymond, a frontend developer from
                             Nigeria. I create beautiful and intuitive user interfaces
                             that are both functional and user-friendly. I have experience
-                            working with HTML, CSS, JavaScript, and React.
+                            working with HTML, CSS, JavaScript, React JS and Next JS Framework.
                         </h3>
                         <div className='w-[20%] h-full'></div>
                     </div>
@@ -120,7 +122,7 @@ const Desktop = () => {
                         <div className='w-[30svw] h-[80%] bg-lightblack'>
                             <div className='w-full h-[30%] flex'>
                                 <div className='w-[15%] h-full'></div>
-                                <img src={web} alt="img" className='w-[15%] h-auto' />
+                                <img src={WebSvg} alt="img" className='w-[15%] h-auto' />
                             </div>
                             <div className='w-full h-[70%] flex '>
                                 <div className='w-[20%] h-full'></div>
@@ -130,7 +132,7 @@ const Desktop = () => {
                         <div className='w-[30svw] h-[80%] bg-lightblack'>
                             <div className='w-full h-[30%] flex'>
                                 <div className='w-[15%] h-full'></div>
-                                <img src={dev} alt="img" className='w-[15%] h-auto' />
+                                <img src={WebSvg1} alt="img" className='w-[15%] h-auto' />
                             </div>
                             <div className='w-full h-[70%] flex '>
                                 <div className='w-[20%] h-full'></div>
@@ -148,12 +150,14 @@ const Desktop = () => {
                         <div className='w-[80%] h-full bg-lightblack flex justify-evenly items-center'>
                             <h3 className='text-[#4F4F4F] font-[700] font-sans capitalize text-[calc(1px_+_3svw_+_3svh)] leading-[70%]'> 82% <br />
                                 <span className='text-green font-[700] font-sans capitalize text-[calc(1px_+_1svw_+_1svh)]'>JavaScript</span></h3>
+                            <h3 className='text-[#4F4F4F] font-[700] font-sans capitalize text-[calc(1px_+_3svw_+_3svh)] leading-[70%]'> 78% <br />
+                                <span className='text-green font-[700] font-sans capitalize text-[calc(1px_+_1svw_+_1svh)]'>reactJS</span></h3>
                             <h3 className='text-[#4F4F4F] font-[700] font-sans capitalize text-[calc(1px_+_3svw_+_3svh)] leading-[70%]'> 73% <br />
-                                <span className='text-green font-[700] font-sans capitalize text-[calc(1px_+_1svw_+_1svh)]'>react</span></h3>
+                                <span className='text-green font-[700] font-sans capitalize text-[calc(1px_+_1svw_+_1svh)]'>expressJS</span></h3>
                             <h3 className='text-[#4F4F4F] font-[700] font-sans capitalize text-[calc(1px_+_3svw_+_3svh)] leading-[70%]'> 70% <br />
-                                <span className='text-green font-[700] font-sans capitalize text-[calc(1px_+_1svw_+_1svh)]'>express</span></h3>
+                                <span className='text-green font-[700] font-sans capitalize text-[calc(1px_+_1svw_+_1svh)]'>nodeJS</span></h3>
                             <h3 className='text-[#4F4F4F] font-[700] font-sans capitalize text-[calc(1px_+_3svw_+_3svh)] leading-[70%]'> 70% <br />
-                                <span className='text-green font-[700] font-sans capitalize text-[calc(1px_+_1svw_+_1svh)]'>nodejs</span></h3>
+                                <span className='text-green font-[700] font-sans capitalize text-[calc(1px_+_1svw_+_1svh)]'>NextJS</span></h3>
                         </div>
                     </div>
                 </div>

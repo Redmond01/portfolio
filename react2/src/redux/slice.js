@@ -3,17 +3,20 @@ import {createSlice} from '@reduxjs/toolkit'
 const sideNav = createSlice({
     name:'sideNav',
     initialState:{
-        slider:true,
+        slider:false,
         stack:false
     },
     reducers:{
         onSideNav:function(state, actions){
-            state.slider = actions.payload
-            return 
+            const getTheSliderState = actions.payload;
+             state.slider = getTheSliderState;
+             return;
+             
         },
         offSideNav:function(state, actions){
-            state.slider = actions.payload
-            return 
+            const getTheSliderState = actions.payload;
+            state.slider = getTheSliderState;
+            return ;
         }
 
     }

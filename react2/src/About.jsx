@@ -1,14 +1,14 @@
 import React from 'react';
 import MobileAbout from './app/mobile/mobileAbout';
 import DesktopAbout from './app/desktop/DesktopAbout';
-import TabletAbout from './app/tablet/TabletAbout';
+import TabletProject from './app/tablet/TabletProject';
 
 const About = () => {
   return (
     <div>
         <MobileAbout/>
         <DesktopAbout/>
-        <TabletAbout/>
+        <TabletProject/>
     </div>
   )
 }
