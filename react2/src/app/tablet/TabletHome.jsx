@@ -4,8 +4,8 @@ import web from '../../asset/web.png';
 import dev from '../../asset/dev.png';
 import { FaUser, FaInbox, FaTwitter, FaYoutube } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import WebSvg from '../../asset/svg/vector.svg'
-import WebSvg1 from '../../asset/svg/vectors.svg'
+import WebSvg from '../../asset/svg/Vector.svg'
+import WebSvg1 from '../../asset/svg/Vectors.svg'
 
 const TabletHome = () => {
     return (

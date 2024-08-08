@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import profile from '../../asset/fff.png';
-import WebSvgs from '../../asset/svg/vector.svg'
-import WebSvg from '../../asset/svg/vectors.svg'
+import WebSvgs from '../../asset/svg/Vector.svg'
+import WebSvg from '../../asset/svg/Vectors.svg'
 import { Link, useLocation } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import styles from '.././style.module.css';
