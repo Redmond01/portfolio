@@ -42,7 +42,7 @@ const MobileProjects = () => {
             <div className={loadingState ? `w-full h-[100svh] bg-blacks flex justify-center items-center` : "hidden"}>
                 <Wave width={'5rem'} height={'5rem'} />
             </div>
-            <div className='w-full h-[150svh] bg-blacks'>
+            <div className='w-full h-[200svh] bg-blacks'>
                 <div className='w-full h-[10svh] flex justify-between items-center px-3 top-0 sticky bg-blacks z-[2]'>
                     <h1 className='text-white capitalize font-[700] text-[calc(1px_+_3svw_+_3svh)] font-sans'>raymond</h1>
                     <FaAlignJustify fill='white' className={`transition-all duration-[2s] ${show ? `opacity-1` : `opacity-0`} text-[calc(1px_+_2svw_+_2svh)]`} onClick={function () {
