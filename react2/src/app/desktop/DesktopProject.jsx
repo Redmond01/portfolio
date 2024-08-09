@@ -17,7 +17,7 @@ const desktopContact = () => {
 
 
   return (
-    <div className='sm:hidden md:hidden lg:block w-full h-[100svh] bg-blacks'>
+    <div className='sm:hidden md:hidden lg:block w-full h-[150svh] bg-blacks'>
       <div className={`${loadingState ? "block" : "hidden"} w-full h-[100svh] flex justify-center items-center`}>
         <Wave width={'5rem'} height={'5rem'} />
       </div>
@@ -41,7 +41,7 @@ const desktopContact = () => {
               <h3 className='text-[3rem] text-white uppercase font-poppins'>MY PROJECTS</h3>
             </div>
           </div>
-          <div className='w-full h-[78svh] p-3 flex justify-center flex-wrap gap-[2rem]'>
+          <div className='w-full h-[78svh] p-3 flex flex-col flex-wrap gap-[2rem]'>
             {projects.map(function (detials) {
               return (
                 <Link to={detials.link} target='_blanck' key={detials.id}><div className='w-[25rem] h-[20rem] border border-white cursor-pointer rounded-[1.5rem]' id={detials.id} key={detials.id}>
