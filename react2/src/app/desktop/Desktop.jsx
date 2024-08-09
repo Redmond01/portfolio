@@ -1,17 +1,66 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import profile from '../../asset/fff.png'
-import web from '../../asset/web.png'
-import dev from '../../asset/dev.png';
 import { Link } from 'react-router-dom';
 import { FaUser, FaInbox, FaTwitter, FaYoutube } from 'react-icons/fa';
-import WebSvg from '../../asset/svg/Vector.svg'
-import WebSvg1 from '../../asset/svg/Vectors.svg'
+import WebSvg from '../../asset/svg/Vector.svg';
+import WebSvg1 from '../../asset/svg/Vectors.svg';
+import Wave from 'react-loading';
+import flowbite from '../../asset/flowbite.png';
+import adgWatch from '../../asset/adgWatch.png';
+import alagbaka from '../../asset/alagbaka.png'
 
+export const projects = [
+    {
+        name: 'FLOWBITE',
+        responsive: 'desktop',
+        type: 'landingPage',
+        id: 1,
+        tools: ['react, tailwindcss'],
+        link: "https://flowbite-bice.vercel.app",
+        img:flowbite
+    },
+    {
+        name: 'ADG WATCH',
+        responsive: 'desktop',
+        type: 'landingPage',
+        id: 2,
+        tools: ['react, tailwindcss'],
+        link: "https://adg-watch.vercel.app",
+        img:adgWatch
+    },
+    {
+        name: 'ALAGBAKA',
+        responsive: 'all',
+        type: 'web app',
+        id: 3,
+        tools: ['react, tailwindcss'],
+        link: "https://fulll-stack-poultry-app.vercel.app",
+        img:alagbaka
+    }
+]
 
 const Desktop = () => {
+    const [loadingState, setLoadingState] = useState(true)
+    const handleScrollToAbout = function () {
+        window.scrollBy(0, 300,)
+    }
+    useEffect(function () {
+        const loadingStateTimer = setTimeout(function () {
+            setLoadingState(false)
+        }, 1000)
+
+        return function () {
+            clearTimeout(loadingStateTimer)
+        }
+    }, [])
+
+
     return (
         <div className='sm:hidden md:hidden lg:block'>
-            <div className='w-full h-[260svh] bg-blacks text-white'>
+            <div className={loadingState ? `w-full h-[100svh] bg-blacks flex justify-center items-center` : "hidden"}>
+                <Wave width={'5rem'} height={'5rem'} />
+            </div>
+            <div className={loadingState ? "hidden" : `w-full h-[260svh] bg-blacks text-white`}>
                 <div className='w-full h-[10svh] flex '>
                     <div className='w-[50%] h-full flex items-center justify-start px-4'>
                         <div className='w-[10%] h-full'></div>
@@ -19,9 +68,9 @@ const Desktop = () => {
                     </div>
                     <div className='w-[50%] h-full flex justify-evenly items-center'>
                         <div className='w-[30%] h-full'></div>
-                        <Link to={'#'}> <h3 className='text-whites font-[600] font-sans capitalize text-[calc(1px_+_.8svw_+_.8svh)] cursor-pointer'> about me</h3></Link>
+                        <Link to={'#'}> <h3 className='text-whites font-[600] font-sans capitalize text-[calc(1px_+_.8svw_+_.8svh)] cursor-pointer' onClick={handleScrollToAbout}> about me</h3></Link>
                         <Link to={'/project'}> <h3 className='text-whites font-[600] font-sans capitalize text-[calc(1px_+_.8svw_+_.8svh)] cursor-pointer'> projects</h3></Link>
-                       {/* <Link to={'#links'}> <h3 className='text-whites font-[600] font-sans capitalize text-[calc(1px_+_.8svw_+_.8svh)] cursor-pointer'> contact me</h3></Link> */}
+                        {/* <Link to={'#links'}> <h3 className='text-whites font-[600] font-sans capitalize text-[calc(1px_+_.8svw_+_.8svh)] cursor-pointer'> contact me</h3></Link> */}
                     </div>
                 </div>
                 <div className='w-full h-[10svh]'></div>
@@ -38,10 +87,10 @@ const Desktop = () => {
                             </div>
                             <div className='w-[70%] h-[20%] flex'>
                                 <div className='w-[50%] h-full flex justify-center items-center'>
-                                    <h3 className='text-whites font-[600] font-sans text-[calc(1px_+_.8svw_+_.8svh)] rounded-full p-1 bg-green w-[95%] h-[50%] flex justify-center items-center text-center cursor-pointer hover:bg-blacks hover:border hover:border-white hover:rounded-full'><Link to={'https://www.dropbox.com/scl/fi/ynzcm7dpz9ne0qlzsrizg/OKE-RAYMOND-JESUTOFUNMI-CV.pdf?rlkey=hjvlzwp45l69ydf865tvigfca&st=y6rxkuxp&dl=0'} target='_blanck'>Download CV</Link> </h3>
+                                   <Link to={'https://www.dropbox.com/scl/fi/ynzcm7dpz9ne0qlzsrizg/OKE-RAYMOND-JESUTOFUNMI-CV.pdf?rlkey=hjvlzwp45l69ydf865tvigfca&st=y6rxkuxp&dl=0'} target='_blanck' className='text-whites font-[600] font-sans text-[calc(1px_+_.8svw_+_.8svh)] rounded-full p-1 bg-green w-[95%] h-[50%] flex justify-center items-center text-center cursor-pointer hover:bg-blacks hover:border hover:border-white hover:rounded-full'> <h3 className=''>Download CV </h3></Link>
                                 </div>
                                 <div className='w-[50%] h-full flex justify-center items-center'>
-                                    <h3 className='text-whites font-[600] font-sans text-[calc(1px_+_.8svw_+_.8svh)] rounded-full p-1s flex justify-center items-center  w-[95%] h-[50%] cursor-pointer border border-harsh hover:bg-harsh'><Link to={'/project'}> projects</Link></h3>
+                                   <Link to={'/project'} className='text-whites font-[600] font-sans text-[calc(1px_+_.8svw_+_.8svh)] rounded-full p-1 border border-whites w-[95%] hover:bg-harsh h-[50%] flex justify-center items-center text-center cursor-pointer hover:border hover:border-white hover:rounded-full'> <h3 className=''>projects </h3></Link>
                                 </div>
                             </div>
                         </div>
@@ -92,7 +141,7 @@ const Desktop = () => {
                         </div>
                         <div className='w-[23%] h-full flex flex-col justify-center items-center p-2 gap-4'>
                             <div className='w-[calc(50%)] h-[50%] bg-lightblack  flex justify-center items-center rounded-full'>
-                               <Link  to={'https://twitter.com/raymonddev_'} target='_blank'> <FaTwitter  className='fill-green text-[calc(1px_+_1.5svw_+_1.5svh)] cursor-pointer' /></Link>
+                                <Link to={'https://twitter.com/raymonddev_'} target='_blank'> <FaTwitter className='fill-green text-[calc(1px_+_1.5svw_+_1.5svh)] cursor-pointer' /></Link>
                             </div>
                             <div className='w-full h-[40%]'>
                                 <h3 className='text-whites font-[400] font-sans capitalize text-[calc(1px_+_.8svw_+_.8svh)] text-center'>
@@ -102,7 +151,7 @@ const Desktop = () => {
                         </div>
                         <div className='w-[23%] h-full flex flex-col justify-center items-center p-2 gap-4'>
                             <div className='w-[calc(50%)] h-[50%] bg-lightblack  flex justify-center items-center rounded-full'>
-                            <Link to={'https://youtube.com/@okeraymond?si=TT2vu6tv-_QMyHje'} target='_blank'><FaYoutube className='fill-green text-[calc(1px_+_1.5svw_+_1.5svh)] cursor-pointer' /></Link>
+                                <Link to={'https://youtube.com/@okeraymond?si=TT2vu6tv-_QMyHje'} target='_blank'><FaYoutube className='fill-green text-[calc(1px_+_1.5svw_+_1.5svh)] cursor-pointer' /></Link>
                             </div>
                             <div className='w-full h-[40%]'>
                                 <h3 className='text-whites font-[400] font-sans capitalize text-[calc(1px_+_.8svw_+_.8svh)] text-center'>

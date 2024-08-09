@@ -7,6 +7,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import styles from '.././style.module.css';
 import { FaAlignJustify, FaTimes, FaExternalLinkAlt, FaGithub, FaYoutube, FaTwitter, FaUser } from 'react-icons/fa'
 import { onSideNav, offSideNav } from '../../redux/slice';
+import Wave from 'react-loading';
 
 
 
@@ -20,26 +21,13 @@ const mobile = () => {
         return state.mobile.slider
     })
 
-    class WindowEffects {
-        closeSliderMethod() {
-            const body = document.body
-            body.addEventListener('click', function () {
-                if (slider === false) {
-                    dispatch(offSideNav(true))
-                    console.log('clicked')
-                }
-            })
 
-        };
-    }
 
 
     const urlLocation = useLocation()
     const currentLocation = urlLocation.pathname
     const ref = useRef(currentLocation)
     useEffect(function () {
-        const callingWindowEffect = new WindowEffects()
-        callingWindowEffect.closeSliderMethod()
 
         const storeLoaction = location.pathname;
         if (storeLoaction !== ref) {
@@ -60,10 +48,27 @@ const mobile = () => {
     }, []);
 
 
+    const [loadingState, setLoadingState] = useState(true)
+    // const handleScrollToAbout = function () {
+    //     window.scrollBy(0, 300,)
+    // }
+    useEffect(function () {
+        const loadingStateTimer = setTimeout(function () {
+            setLoadingState(false)
+        }, 1000)
+
+        return function () {
+            clearTimeout(loadingStateTimer)
+        }
+    }, [])
+
 
     return (
         <div className='w-full h-full sm:block md:hidden lg:hidden'>
-            <div className={`w-full h-[280svh] bg-[#171717] relative transition-all duration-[.5s]  ${slider ? `opacity-1` : `opacity-[.9]`}`}>
+            <div className={loadingState ? `w-full h-[100svh] bg-blacks flex justify-center items-center` : "hidden"}>
+                <Wave width={'5rem'} height={'5rem'} />
+            </div>
+            <div className={`w-full h-[280svh] bg-[#171717] relative transition-all duration-[.5s]  ${slider ? `opacity-1 ` : `opacity-[.9]`}`}>
                 <div className='w-full h-[10svh] flex justify-between items-center px-3 top-0 sticky bg-lightblack z-[2]'>
                     <h1 className='text-white capitalize font-[700] text-[calc(1px_+_3svw_+_3svh)] font-sans'>raymond</h1>
                     <FaAlignJustify fill='white' className={`transition-all duration-[.5s] ${slider ? `opacity-1` : `opacity-0`} text-[calc(1px_+_2svw_+_2svh)]`} onClick={function () {
@@ -71,26 +76,25 @@ const mobile = () => {
                     }} />
 
                     <div className={`transition-all duration-[.5s] ${slider ? styles.close : styles.open}`}>
-                        <div className='w-full h-[20%]'> <FaTimes fill='black' className='text-[calc(1px_+_4svw_+_4svh)] p-2 ' onClick={function () {
+                        <div className='w-full h-[20%] p-3'> <FaTimes fill='black' className='text-[calc(1px_+_4svw_+_4svh)] p-2 ' onClick={function () {
                             dispatch(offSideNav(true))
                         }} />
                         </div>
                         <div className='w-full h-[80%] flex flex-col justify-center items-center'>
                             <Link to={'/'} className='w-full h-[32%] flex items-center justify-center gap-2'>
-                                <h3 className='font-sans font-[600] capitalize text-center text-[1px_+_3svw_+_3svh]'>home</h3>
+                                <h3 className='font-sans font-[600] capitalize text-center text-[1.5rem]'>home</h3>
                                 <FaExternalLinkAlt />
                             </Link>
                             <hr className='w-[90%] border-1 border-black' />
                             <Link to={'/project'} className='w-full h-[32%] flex items-center justify-center gap-2'>
-                                <h3 className='font-sans font-[600] capitalize text-center text-[1px_+_3svw_+_3svh]'>projects</h3>
+                                <h3 className='font-sans font-[600] capitalize text-center text-[1.5rem]'>projects</h3>
                                 <FaExternalLinkAlt />
                             </Link>
-                            <hr className='w-[90%] border-1 border-black' />
 
-                            <Link to={'/about'} className='w-full h-[32%] flex items-center justify-center gap-2'>
+                            {/* <Link to={'/about'} className='w-full h-[32%] flex items-center justify-center gap-2'>
                                 <h3 className='font-sans font-[600] capitalize text-center text-[1px_+_3svw_+_3svh]'>about me</h3>
                                 <FaExternalLinkAlt />
-                            </Link>
+                            </Link> */}
                         </div>
                     </div>
                 </div>
@@ -107,12 +111,15 @@ const mobile = () => {
                             </h3>
                         </div>
                         <div className='w-full h-[20%] flex gap-3 justify-center items-start px-2'>
-                            <div className=' w-[calc(1px_+_27svw)] h-[calc(1px_+_3.5svh)]  bg-[#27AE60] rounded-full flex justify-center items-center'>
-                                <h3 className='text-[calc(1px_+_.9svw_+_.8svh)] capitalize font-[500] font-sans text-white'>donwload CV</h3>
-                            </div>
-                            <div className=' w-[calc(1px_+_25svw)] h-[calc(1px_+_3.5svh)] border border-white  rounded-full flex justify-center items-center'>
+                            <Link to={'https://www.dropbox.com/scl/fi/ynzcm7dpz9ne0qlzsrizg/OKE-RAYMOND-JESUTOFUNMI-CV.pdf?rlkey=hjvlzwp45l69ydf865tvigfca&st=y6rxkuxp&dl=0'} target='_blanck' className='w-[12rem] h-[1.8rem] bg-[#27AE60] rounded-full flex justify-center items-center'>
+                                <div className=''>
+                                    <h3 className='text-[.7rem] capitalize font-[500] font-sans text-white'>donwload CV</h3>
+                                </div>
+                            </Link>
+                            <Link to={'/project'}> <div className=' w-[calc(1px_+_25svw)] h-[calc(1px_+_3.5svh)] border border-white  rounded-full flex justify-center items-center'>
                                 <h3 className='text-[calc(1px_+_.9svw_+_.9svh)] capitalize font-[500] font-sans text-white'>projects</h3>
                             </div>
+                            </Link>
                         </div>
                     </div>
                     <div className='w-[50%] h-full py-10 flex justify-center items-start'>

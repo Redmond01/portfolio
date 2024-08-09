@@ -1,7 +1,5 @@
 import React from 'react'
 import profile from '../../asset/fff.png';
-import web from '../../asset/web.png';
-import dev from '../../asset/dev.png';
 import { FaUser, FaInbox, FaTwitter, FaYoutube } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import WebSvg from '../../asset/svg/Vector.svg'
@@ -148,11 +146,13 @@ const TabletHome = () => {
                             <h3 className='text-[#4F4F4F] font-[700] font-sans capitalize text-[calc(1px_+_2svw_+_2svh)] leading-[70%]'> 82% <br />
                                 <span className='text-green font-[700] font-sans capitalize text-[calc(1px_+_.8svw_+_.8svh)]'>JavaScript</span></h3>
                             <h3 className='text-[#4F4F4F] font-[700] font-sans capitalize text-[calc(1px_+_2svw_+_2svh)] leading-[70%]'> 73% <br />
-                                <span className='text-green font-[700] font-sans capitalize text-[calc(1px_+_.8svw_+_.8svh)]'>react</span></h3>
+                                <span className='text-green font-[700] font-sans capitalize text-[calc(1px_+_.8svw_+_.8svh)]'>reactJS</span></h3>
                             <h3 className='text-[#4F4F4F] font-[700] font-sans capitalize text-[calc(1px_+_2svw_+_2svh)] leading-[70%]'> 70% <br />
-                                <span className='text-green font-[700] font-sans capitalize text-[calc(1px_+_.8svw_+_.8svh)]'>express</span></h3>
+                                <span className='text-green font-[700] font-sans capitalize text-[calc(1px_+_.8svw_+_.8svh)]'>expressJS</span></h3>
                             <h3 className='text-[#4F4F4F] font-[700] font-sans capitalize text-[calc(1px_+_2svw_+_2svh)] leading-[70%]'> 70% <br />
-                                <span className='text-green font-[700] font-sans capitalize text-[calc(1px_+_.8svw_+_.8svh)]'>nodejs</span></h3>
+                                <span className='text-green font-[700] font-sans capitalize text-[calc(1px_+_.8svw_+_.8svh)]'>nodeJS</span></h3>
+                            <h3 className='text-[#4F4F4F] font-[700] font-sans capitalize text-[calc(1px_+_2svw_+_2svh)] leading-[70%]'> 70% <br />
+                                <span className='text-green font-[700] font-sans capitalize text-[calc(1px_+_.8svw_+_.8svh)]'>nextJS</span></h3>
                         </div>
                     </div>
                 </div>
