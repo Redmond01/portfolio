@@ -31,7 +31,7 @@ export default function Portfolio() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (sectionId:string) => {
+  const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
@@ -84,8 +84,8 @@ export default function Portfolio() {
                   key={section}
                   onClick={() => scrollToSection(section)}
                   className={`capitalize transition-colors ${activeSection === section
-                      ? 'text-blue-400 font-semibold'
-                      : 'text-slate-300 hover:text-blue-300'
+                    ? 'text-blue-400 font-semibold'
+                    : 'text-slate-300 hover:text-blue-300'
                     }`}
                 >
                   {section}
@@ -110,8 +110,8 @@ export default function Portfolio() {
                   key={section}
                   onClick={() => scrollToSection(section)}
                   className={`capitalize text-left transition-colors ${activeSection === section
-                      ? 'text-blue-400 font-semibold'
-                      : 'text-slate-300 hover:text-blue-300'
+                    ? 'text-blue-400 font-semibold'
+                    : 'text-slate-300 hover:text-blue-300'
                     }`}
                 >
                   {section}
@@ -171,12 +171,9 @@ export default function Portfolio() {
               })}
             </div>
           </div>
-
+          
           <div className="flex justify-center">
-            <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-linear-to-br from-blue-600 to-blue-900 flex items-center justify-center border-4 border-blue-500/30 ">
-              {/* <div className="text-8xl">👨‍💻</div> */}
-              <Image src={RaymondJPG} alt='img' className='w-full h-auto' quality={100}/>
-            </div>
+            <Image src={RaymondJPG} alt='img' className='w-64 h-64 md:w-80 md:h-80 rounded-full bg-linear-to-br from-blue-600 to-blue-900 border-4 border-blue-500/30' quality={100} />
           </div>
         </div>
       </section>
