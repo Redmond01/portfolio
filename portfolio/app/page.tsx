@@ -4,6 +4,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { Menu, X, Github, Linkedin, Twitter, ExternalLink, Mail, MessageCircle } from 'lucide-react';
+import { BsTiktok } from 'react-icons/bs';
 import RaymondJPG from '@/public/asset/RaymondJPG.jpeg'
 
 export default function Portfolio() {
@@ -64,7 +65,7 @@ export default function Portfolio() {
   const socialLinks = [
     { name: "Twitter", icon: Twitter, link: "https://twitter.com/raymonddev_", username: "@raymonddev_" },
     { name: "LinkedIn", icon: Linkedin, link: "https://www.linkedin.com/in/oke-raymond-6b742a2a4/", username: "Oke Raymond" },
-    { name: "TikTok", icon: MessageCircle, link: "https://tiktok.com/@imredmond", username: "@imredmond" }
+    { name: "TikTok", icon: BsTiktok, link: "https://tiktok.com/@imredmond", username: "@imredmond" }
   ];
 
   return (
@@ -171,7 +172,7 @@ export default function Portfolio() {
               })}
             </div>
           </div>
-          
+
           <div className="flex justify-center">
             <Image src={RaymondJPG} alt='img' className='w-64 h-64 md:w-80 md:h-80 rounded-full bg-linear-to-br from-blue-600 to-blue-900 border-4 border-blue-500/30' quality={100} />
           </div>
