@@ -5,6 +5,7 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { Menu, X, Github, Linkedin, Twitter, ExternalLink, Mail, MessageCircle } from 'lucide-react';
 import { BsTiktok } from 'react-icons/bs';
+import { FaXTwitter } from 'react-icons/fa6';
 import RaymondJPG from '@/public/asset/RaymondJPG.jpeg'
 
 export default function Portfolio() {
@@ -63,7 +64,7 @@ export default function Portfolio() {
   ];
 
   const socialLinks = [
-    { name: "Twitter", icon: Twitter, link: "https://twitter.com/raymonddev_", username: "@raymonddev_" },
+    { name: "Twitter", icon: FaXTwitter, link: "https://twitter.com/raymonddev_", username: "@raymonddev_" },
     { name: "LinkedIn", icon: Linkedin, link: "https://www.linkedin.com/in/oke-raymond-6b742a2a4/", username: "Oke Raymond" },
     { name: "TikTok", icon: BsTiktok, link: "https://tiktok.com/@imredmond", username: "@imredmond" }
   ];
